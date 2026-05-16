@@ -1,0 +1,38 @@
+#nav_ini{
+    width: 100%;
+    height: 4vh;
+    border: 2px solid rgb(182, 180, 180);
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+    border: none;
+    color: #ffffff;
+    
+    
+}
+#nav_ini .ul_ini {
+    background-color: #006400;
+    display: flex;        /* lo vuelve horizontal */
+    list-style: none;     /* quita puntitos */
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+    width: 100%;
+    height: 4vh;
+    justify-items: center;
+    
+}
+
+#nav_ini .ul_ini li{
+
+    width: 100%;
+}
+#nav_ini .ul_ini li a{
+    display: inline; /* opcional pero ayuda */
+    color: #ffffff;
+    border: none;
+   
+}
+.ul_ini li a:hover{
+    background-color: transparent;
+    color: #ffffff;
+}
+

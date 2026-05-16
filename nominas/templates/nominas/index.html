@@ -1,0 +1,53 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <div class="cont">
+        <div class="selecionador">
+            <form action="{% url 'nominas:index' %}" method="get">
+                <select name="opcion" id="" onchange="this.form.submit()">
+                    <option value="">Seleccione una opcion</option>
+                    <option value="tabla_1" {% if opcion == 'tabla_1' %}selected{% endif %}>Reporte de Promedio salarial por departamento</option>
+                    <option value="tabla_2" {% if opcion == 'tabla_2' %}selected{% endif %}>Reporte de antiguedad de empleados del dep. 20</option>
+                    <option value="tabla_3" {% if opcion == 'tabla_3' %}selected{% endif %}>Reporte de Gasto total de salarios por departamento que ganan > 15000</option>
+                    <option value="tabla_4" {% if opcion == 'tabla_4' %}selected{% endif %}>Reporte de gasto salarial por puesto (sin TRAN y > 2000)</option>
+                    <option value="tabla_5" {% if opcion == 'tabla_5' %}selected{% endif %}>Reporte de empleados y jefes directos</option>
+                    <option value="tabla_6" {% if opcion == 'tabla_6' %}selected{% endif %}>Reporte de equipo por jefes (ordenado por tamaño de equipo)</option>
+                    <option value="tabla_7" {% if opcion == 'tabla_7' %}selected{% endif %}>Reporte geografico de empleados</option>
+                    <option value="tabla_8" {% if opcion == 'tabla_8' %}selected{% endif %}>Reporte de ficha de empleado</option>
+                    <option value="tabla_9" {% if opcion == 'tabla_9' %}selected{% endif %}>Reporte de empleados con salarios inferiores a IT_PROG</option>
+                    <option value="tabla_10" {% if opcion == 'tabla_10' %}selected{% endif %}>Reporte de empleados sin personal a cargo</option>
+                </select>
+            </form>
+
+        </div>
+        <div class="boton_pdf">
+            <a href="{% url 'nominas:tablas_pdf' %}?opcion={{ opcion }}">
+            Generar PDF</a>
+            
+        </div>
+        
+    </div>
+    <table id = {{opcion}}>
+        <h2>{{ titulo }}</h2>
+        <thead>
+            <tr>
+                {% for columna in columnas %}
+                    <th>{{ columna }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for empleado in filas %}
+            <tr>
+                {% for datos in empleado %}
+                    <td>{{ datos }}</td>
+                {% endfor %}    
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}
+
+

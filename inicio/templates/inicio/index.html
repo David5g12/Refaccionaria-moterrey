@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <div class="contenedor_inicio">
+        <div class="nav_inicio">
+           {% include 'inicio/includes/nav_inicio.html' %}
+        </div>
+
+        <div class="presentacion_inicio">
+            <img src="{% static 'img/presentacion.png' %}" alt="" class="img_fondo">
+        </div>
+    </div>
+    
+{% endblock %}

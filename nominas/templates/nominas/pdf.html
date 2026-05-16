@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF</title>
+</head>
+<body>
+    <style>
+        @page{
+            size: A4 landscape; 
+            margin: 1cm;
+        }
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: clamp(10px, 1vw, 12px);
+        }
+        
+        .encabezado{
+            display: flex;
+            width: 100%;
+            margin-bottom: 10px;
+            
+
+        }
+        .logo{
+            width: 10%;
+        }
+        .logo img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+        
+        .avatar{
+            width: 30px;
+            aspect-ratio: 1/1;
+            border-radius: 50px;
+            object-fit: cover;
+            margin: 0% 0% 0% 0%;
+            
+        }
+        
+        .titulo{
+            width: 90%;
+            text-align:  center;
+            margin-top: 0%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+
+        }
+        th{
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+        } 
+        td{
+            border: 1px solid black;
+            padding: 4px;
+            word-wrap: break-word;
+            font-size: 12px;
+        }
+        h1{
+            margin: 0%;
+        }
+
+        
+        
+
+    </style>
+
+    <div class="encabezado">
+        <div class="logo">
+            <img src="{{img_url}}" alt="" class="avatar"> 
+        </div>
+        <div class="titulo">
+            <h1>{{titulo}}</h1>
+        </div>
+  
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                {% for columna in columnas %}
+                <th>{{ columna }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for empleados in filas %}
+            <tr>
+                {% for map in empleados %}
+                <td>{{map}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+<script src="{% static 'js/script_general.js' %}"></script>
+<nav>
+    <ul>
+        <li><a href="{% url 'inicio:index' %}" class="nav-link">Inicio</a></li>
+        <li><a href="{% url 'nominas:index' %}" class="nav-link">Nominas</a></li>
+        <li></li>
+    </ul>
+</nav>

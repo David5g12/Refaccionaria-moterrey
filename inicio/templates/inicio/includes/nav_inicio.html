@@ -1,0 +1,10 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/nav_inicio.css' %}">
+<nav id="nav_ini">
+  <ul class="ul_ini">
+    <li><a href="https://refaccionariasmonterrey.com/es/sucursales">Sucursales</a></li>
+    <li><a href="https://refaccionariasmonterrey.com/es/nosotros">Nosotros</a></li>
+    <li><a href="#">Contacto</a></li>
+    <li><a href="{% url 'inicio:acercade' %}">acerca de la app</a></li>
+  </ul>
+</nav>

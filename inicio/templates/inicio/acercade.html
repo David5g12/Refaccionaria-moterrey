@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+   <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <div class="contenedor_inicio">
+        <div class="nav_inicio">
+           {% include 'inicio/includes/nav_inicio.html' %}
+        </div>
+
+        <div id="content_acerca">
+            <div class="caja">
+                <h1>Mi App</h1><br>
+                <p class="parrafo">Esta aplicación web fue desarrollada únicamente con fines educativos y de práctica, con el propósito de aprender, experimentar y mejorar habilidades en desarrollo web, diseño de interfaces, gestión de datos e implementación de funcionalidades administrativas.</p><br>
+                <p class="parrafo">El proyecto no tiene fines comerciales, no representa oficialmente a ninguna empresa, marca o entidad, y cualquier referencia utilizada dentro de la aplicación es únicamente con fines demostrativos, académicos o de prueba.</p><br>
+                <p class="parrafo">Su objetivo principal es servir como proyecto de aprendizaje, portafolio y práctica técnica durante el proceso de desarrollo y experimentación de nuevas funcionalidades.</p><br>
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}
+
