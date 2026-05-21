@@ -85,7 +85,7 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',  # motor PostgreSQL
-        'NAME': 'db_monterrey',                               # DB_DATABASE de Laravel
+        'NAME': 'name_db',                               # DB_DATABASE 
         'USER': 'postgres',                           # DB_USERNAME
         'PASSWORD': 'password',                       # DB_PASSWORD
         'HOST': 'localhost',                          # DB_HOST
