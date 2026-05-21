@@ -87,7 +87,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',  # motor PostgreSQL
         'NAME': 'db_monterrey',                               # DB_DATABASE de Laravel
         'USER': 'postgres',                           # DB_USERNAME
-        'PASSWORD': '+David31',                       # DB_PASSWORD
+        'PASSWORD': 'password',                       # DB_PASSWORD
         'HOST': 'localhost',                          # DB_HOST
         'PORT': '5432',                               # DB_PORT
     }
